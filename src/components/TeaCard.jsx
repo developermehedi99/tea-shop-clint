@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import PropTypes from 'prop-types';
 
 const TeaCard = ({ tea, setTeas, teas }) => {
     const { _id, name, chef, category, details, photo } = tea;
@@ -62,3 +63,9 @@ const TeaCard = ({ tea, setTeas, teas }) => {
 };
 
 export default TeaCard;
+
+TeaCard.propTypes = {
+    tea: PropTypes.object,
+    setTeas: PropTypes.object,
+    teas: PropTypes.object,
+}
